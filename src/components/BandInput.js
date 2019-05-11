@@ -1,5 +1,6 @@
 // Add BandInput component
 import React, { Component } from 'react'
+import { addBand } from '../actions/bands'
 
 class BandInput extends Component {
 
@@ -12,7 +13,7 @@ class BandInput extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addTodo(this.state)
+    this.props.addBand(this.state)
     this.setState({
       name: ''
     })
@@ -37,4 +38,4 @@ class BandInput extends Component {
   }
 }
 
-export default connect(null, { addBands })(BandInput);
+export default connect(null, { addBand })(BandInput);
